@@ -93,5 +93,15 @@ double Calculate(double operand1,double operand2,int choice){
     }
     result = operand1 / operand2;
   }
+  if (result < DBL_MIN)
+  {
+    printf("Number underflow\n");
+    return 0;
+  }
+  if (result > DBL_MAX)
+  {
+    printf("Number overflow\n");
+    return 0;
+  }
   return result;
 }
